@@ -1,0 +1,96 @@
+{
+  "runId": "cndp-survey-page-audit-v4-redesign-20261028-090140",
+  "mode": "selected-sections",
+  "sections": [
+    "what-your-customers-want-isn-t-hidden-it-s-unheard",
+    "customer-needs-pain-points-dashboard",
+    "use-real-feedback-from-real-audiences-to-understand-what-drives-decisions-and-act-with-confidence",
+    "how-we-understand-what-your-customers-really-want",
+    "what-makes-our-way-different",
+    "our-impact",
+    "what-our-clients-say",
+    "faqs",
+    "our-resources",
+    "explore-other-surveys"
+  ],
+  "simulated": [
+    "Forms do not submit: submitting any form in the preview shows a notice and sends nothing.",
+    "Links point at the real site; they were not followed during verification.",
+    "The page's own scripts do not run: only behaviour the browser provides natively, CSS, and the generic adapters (anchors, disclosure toggles, carousel navigation) work. Everything else is probed and listed as not reproduced.",
+    "Carousel motion is a preview adapter: all captured slides are retained, with local arrow/pagination navigation and a CSS loop. The original script's autoplay timing and slide-selection side effects are not reproduced."
+  ],
+  "unavailable": [
+    "what-your-customers-want-isn-t-hidden-it-s-unheard · hover: link \"Get Pricing & Timeline\": hover changes transform on the original; different properties in the preview",
+    "customer-needs-pain-points-dashboard · link: link \"View Sample Dashboard\": the control exists on the original page but not in the preview",
+    "customer-needs-pain-points-dashboard · hover: link \"View Sample Dashboard\": the control exists on the original page but not in the preview",
+    "customer-needs-pain-points-dashboard · timer: script-driven changes over time: 4 element(s) change over time on the original; 0 in the preview",
+    "how-we-understand-what-your-customers-really-want · hover: link \"Discuss Scope\": hover changes transform on the original; different properties in the preview",
+    "how-we-understand-what-your-customers-really-want · timer: script-driven changes over time: 1 element(s) change over time on the original; 0 in the preview",
+    "what-makes-our-way-different · hover: link \"Get Survey Roadmap\": hover changes transform on the original; different properties in the preview",
+    "what-our-clients-say · scroll: scroll-linked changes: 1 element(s) change as the page scrolls on the original (span.swiper-pagination-bullet \"\"); 0 in the preview",
+    "what-our-clients-say · timer: script-driven changes over time: 3 element(s) change over time on the original; 0 in the preview",
+    "faqs · hover: 11 items, e.g. pointer \"Can CNDP surveys explain why customers d\": the control exists on the original page but not in the preview | pointer \"How do I know whether my customers’ need\": the control exists on the original page but not in the preview",
+    "faqs · click: 11 items, e.g. pointer \"Can CNDP surveys explain why customers d\": the control exists on the original page but not in the preview | pointer \"How do I know whether my customers’ need\": the control exists on the original page but not in the preview",
+    "explore-other-surveys · hover: 5 items, e.g. link \"Employee Engagement Surveys\": hover changes transform on the original; nothing in the preview | link \"Customer Satisfaction Surveys\": hover changes transform on the original; nothing in the preview",
+    "explore-other-surveys · scroll: scroll-linked changes: 11 element(s) change as the page scrolls on the original (div..w-full \"Employee Engagement Surveys Un\"; div..w-full \"Customer Satisfaction Surveys \"; div..w-full \"Dealer’s Voice Surveys Get hon\"); 0 in the preview"
+  ],
+  "verdict": "fail",
+  "failedRequired": 184,
+  "unverifiedRequired": 357,
+  "gaps": [
+    {
+      "kind": "failed",
+      "family": "checks",
+      "count": 4,
+      "text": "5 verification check(s) failed: fidelity.design-state, content.customer-needs-pain-points-dashboard.links, content.faqs.height, contrast.no-regression, ds-fix.measured"
+    },
+    {
+      "kind": "failed",
+      "family": "fidelity:regression",
+      "count": 144,
+      "text": "design/state fidelity: 144 regression(s)"
+    },
+    {
+      "kind": "failed",
+      "family": "target",
+      "count": 36,
+      "text": "77 of 230 resolved target(s) not verified in the rendered preview (36 failed)"
+    },
+    {
+      "kind": "unverified",
+      "family": "interaction:not-located",
+      "count": 1,
+      "text": "1 section(s) could not be located on the original page, so their behaviour was not compared with it (our-resources): interaction parity is not verified for them"
+    },
+    {
+      "kind": "unverified",
+      "family": "fidelity:element+hover",
+      "count": 74,
+      "text": "design/state fidelity is INCOMPLETE: 74 of 1014 required check(s) not verified (853 verified, 87 failed, 74 unverified: element 22, hover 52; 55 actionable / 19 by-design) — first: faqs (desktop): the text of \"Can CNDP surveys explain why customers d\" differs from the original, so its design was not compared"
+    },
+    {
+      "kind": "unverified",
+      "family": "target",
+      "count": 41,
+      "text": "41 resolved target(s) could not be measured in the rendered preview"
+    },
+    {
+      "kind": "unverified",
+      "family": "preserve",
+      "count": 241,
+      "text": "241 preserve decision(s) could not be verified (insufficient evidence; 157 actionable / 84 by-design): inside a design-system component ×84, element text changed ×62, layout change explains the box change ×50"
+    }
+  ],
+  "gapsTruncated": 0,
+  "disclosed": [
+    "fidelity: element 151, hover 31, composition 12 check(s) disclosed as not required (sampled 171 of 259 element(s) for hover, 16 of 16 for keyboard focus; the rest are in fidelity.json coverage.gaps)",
+    "not captured by the fidelity verifier: :active (pressed) styling; expanded / selected states that only a page script can reach — script-driven behaviour is probed on the live production page by B1 (effects, not styles); validation/error states that need a real submission (forms are never submitted); hover and focus on the mobile viewport (touch devices have no hover; desktop captures them); sibling / non-descendant hover effects (:hover + .x, :hover ~ .x): only the hovered element and its own descendants (with their ::before / ::after) are measured; pseudo-elements other than ::before / ::after (::marker, ::placeholder, ::selection, ::first-line, ...) and the pseudo-elements of elements outside the captured set",
+    "No content sits directly beside a selected section without belonging to a section: 1 unowned block(s): <div> before what-your-customers-want-isn-t-hidden-it-s-unheard: \".redRadialBg{ animation: moveRightToLeft 30s ease-\"",
+    "Text below AA that is inherited unchanged from the original page: 15 run(s) are below AA (14 inherited from the original, 1 introduced, 0 without an original counterpart); 35 miss the design system's 7:1 rule R7.1; muted labels: 12/36 below AA, 19/36 below 7:1. Inherited text is left as designed — …",
+    "13 behaviour(s) of the original page are not reproduced in the preview (listed in PREVIEW.md)",
+    "4 simulated or stubbed behaviour(s) (for example forms do not submit)",
+    "4 text run(s) could not be contrast-measured",
+    "177 of 200 Fix finding(s) are not measured fixed (preserved-by-decision 65, partially-verified 13, not-represented 85, unresolved 14): they are listed in finding-accounting.md and are not claimed fixed; this does not change the required-check verdict"
+  ],
+  "disclosedTruncated": 0
+}
